@@ -1,0 +1,77 @@
+<!-- Git
+Tipos de aplicaciones:
+    GUI (Graphic User Interface): se pueden abrir tocando el ícono.
+    CLI (Command Line Interface): funciona mediante comandos. GIT entra en esta categoría.
+    -Git Bash: terminal donde podemos ejecutar Git. Se puede en otras terminales.
+
+Repositorios: almacen de las distintas versiones de nuestro proyecto. Vamos a usar Git.
+Git: sistema que permite administrar todas las versiones de la página web. EN LA PC.
+GitHub: APP WEB.
+RECOMENDACIÓN: MISMO MAIL EN AMBAS.
+
+git config --global user.name "AilinMolina": estamos diciendo que vamos a configurar algo en nuestra aplicación de Git de manera global, en este caso nuestro nombre de usuario.
+
+git config --global user.email ailinmol05@gmail.com: configuración del email.
+
+git config --list: tira un listado de todas las configuraciones que tenemos.
+
+Si tenemos más de un disco en la computadora, hay que hacer el código en el mismo disco que instalamos Git.
+
+Ctrl + J: para abrir terminal en Visual Studio.
+- Al lado del powershell, +, selecciono la terminal que uso. Vamos a usar: Powershell, Git Bash y Command Prompt.
+
+Abro Powershell en la compu y lo ejecuto como Administrador. Nos damos cuenta que está ejecutada como administrador si aparece "system32"
+
+git init: inicializar el repositorio.
+EL REPOSITORIO ESTÁ DENTRO DE LA CARPETA .git
+Lo ideal es no eliminarlo, para generarlo escribimos: git init
+La U en verde significa "untracked" (sin traqueo/sin seguimiento), nos aparece porque el Git no tiene un seguimiento de ese archivo en particular.
+
+git add .: si queremos hacer un traqueo sobre todos los archivos. Aparece una A que significa "added" (añadido).
+git add index.html: en caso de quererlo hacer solamente en uno.
+Si aparece una M, significa "modified" (modificado).
+
+Hay que guardar lo realizado en la terminal, para eso necesitamos Comitear.
+git commit -m "comentario": entre comillas va un comentario de lo que acabamos de realizar. Y nos da una pequeña descripción de lo realizado.
+
+git log: me dice una lista de los commits que ocurrieron en la compu.
+
+Ejemplo: desarrollo una aplicación, sacó mi 1ra versión, en donde creo tal cosa. Después, creo un 2do código sobre el 1ro al cual le añado algo nuevo, entonces está es una funcionalidad que le acabo de añadir a la aplicación, generando un nuevo Commit.
+Luego pasa que al añadir eso la aplicación empieza a fallar. En este caso lo que se hace es volver a la 1ra versión, ya que sabemos que la 2da está fallando.
+
+"creo mi primer repositorio" es la 1ra versión, entonces copio el ID del Commit(está en amarillo).
+Y ahora ejecuto un nuevo comando: git checkout (para moverse entre ramas). Y al lado le pego el ID.
+
+Va a pedir que cree una rama, me indica que ambas versiones pertenecen a la misma rama, en este caso HEAD.
+git checkout -b: ahí pegamos el ID del 1er repositorio.
+Esto lo que hace es crear una nueva rama con el nombre del ID y me cambia a esa rama. Al ver el código del index vemos que desaparece "<h2>Mi primer subtitulo</h2>". Siendo que esa nueva rama no tiene el h2, de modo que volvemos a una versión anterior.
+
+Si quiero volver a la versión siguiente, hago nuevamente: git log. Vamos al ID que aparece abajo de TIMELINE y nos dice que hay 2 ramas: master y la que creamos. Volvemos a la master y hacemos git log, y ahí si figuran las 2 ramas nuevamente.
+-->
+<!-- COMO USAR GITHUB 
+1) Boton verde New, Crear nuevo repositorio, usamos el Público.
+2) Escribimos el nombre del repositorio.
+3) Apreto Crear repositorio.
+4) Nos lleva a la página de nuestro repositorio. Este repositorio esta en la nube, esta en la web. Es decir, se puede compartir.
+-->
+<!-- Para eliminar un repositorio, ir al mismo, ir a Configuración, Zona de peligro. -->
+<!-- OTROS COMANDOS
+    git branch -M main (abajo a la izq aparece Master, quiere decir que estoy en la rama maestra): cambia el nombre Master a Main. 
+        - Las ramas en Git empiezan siempre con un tronco, y a ese tronco principal se le suele llamar Master.
+        Pero GitHub nos recomienda que se llame Main, entonces le llamamos Main.
+    git remote add origin https://github.com/AilinMolina/prueba- TN-intensivo.git: link donde esta nuestro repositorio. Si queremos enviar datos a la web, lo vamos a tener que hacer por el protocolo web. SIEMPRE COPIARLO Y PEGARLO, NO ESCRIBIR A MANO.
+    git push -u origin main: añade/envía la info a la dirección remota que pusimos anteriormente. Especificamente, va a crear una rama de origen que se llame Main para que coordine con la rama que ya teníamos creada, y ahí se añade.
+
+    EN CASO DE QUE APAREZCA UNA NUEVA VENTANA PARA CONECTARNOS CON GITHUB:
+    Iniciamos sesión con el browser. Le damos a Autorizar git-ecosystem. Le damos a Use GitHub Mobile.
+-->
+<!-- Volvemos al GitHub, recargamos la página, y aparece nuestro código.
+
+TODO ESTO SE HACE PARA CADA PROYECTO QUE QUEREMOS GUARDAR -->
+<!-- AHORA, si le agrego algo, lo guardo, y en vez de andar usando la terminal, vamos al Source Control (abajo del buscador en Visual), apretamos el + en Changes y en la barra para escribir ponemos el mensaje del commit. Luego apretamos Sync Changes, y esto ya actualiza todo al último cambio agregado. 
+
+SI LO HAGO MEDIANTE CÓDIGO:
+git add .
+git commit -m ""
+git push
+-->
